@@ -34,6 +34,7 @@ class EccomerceTexts{
   static const String verificationCode = "VerificationCode";
   static const String resendEmail = "Resend Email";
   static const String resendEmailIn = "Resend email in";
+  static const String and = "&";
 
 // Authentication Headings Text
   static const String loginTitle = "Welcome back.";

@@ -1,4 +1,6 @@
+import 'package:eccomerce_app/features/authentication/screens/signup/signup.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../../utils/constants/sizes.dart';
@@ -55,7 +57,7 @@ class EccomerceLoginForm extends StatelessWidget {
           //   Create Account button
           SizedBox(
             width: double.infinity,
-            child: OutlinedButton(onPressed: () {}, child: const Text(EccomerceTexts.createAccount),),),
+            child: OutlinedButton(onPressed: () => Get.to(() => const SignupScreen()), child: const Text(EccomerceTexts.createAccount),),),
         ],
       ),
     ),
