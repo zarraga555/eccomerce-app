@@ -1,9 +1,7 @@
 import 'package:eccomerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../../utils/constants/colors.dart';
-import '../../../utils/constants/text_strings.dart';
 
 class EccomerceFormDivider extends StatelessWidget {
   const EccomerceFormDivider({
