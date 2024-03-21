@@ -36,12 +36,14 @@ class EccomerceTexts{
   static const String resendEmailIn = "Resend email in";
   static const String and = "&";
   static const String tContinue = "Continue";
+  static const String done = "Done";
 
 // Authentication Headings Text
   static const String loginTitle = "Welcome back.";
   static const String loginSubTitle = "Discover Limitless Choices and Unmatched Convenience.";
   static const String signupTitle = "Let's create your account.";
   static const String forgetPasswordTitle = "Forget password.";
+  static const String forgotPasswordSubTitle = "Don't worry sometimes people can forget too, enter your email and we will send you a password reset link.";
   static const String changeYourPasswordTitle = "Password Reset Email Sent.";
   static const String changeYourPasswordSubtitle = "Your Account Security is Our Priority! We've Sent You a Secure Link to Safely Change Your Password and Keep Your Account Protected.";
   static const String confirmEmail = "Verify your email address!";
@@ -49,4 +51,5 @@ class EccomerceTexts{
   static const String emailNotReceivedMessage = "Didn't get the email? Check you junk/spam or resend it.";
   static const String yourAccountCreatedTitle = "Your account successfully created!";
   static const String yourAccountCreatedSubTitle = "Welcome to Your E-commerce favorite. Your Account is Created, Unleash the joy of Seamless Online Shopping!";
+  static const String submit = "Submit";
 }
