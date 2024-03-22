@@ -1,5 +1,6 @@
 import 'package:eccomerce_app/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:eccomerce_app/features/authentication/screens/signup/signup.dart';
+import 'package:eccomerce_app/navigation_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -53,7 +54,7 @@ class EccomerceLoginForm extends StatelessWidget {
           const SizedBox(height: EccomerceSizes.spaceBtwSections,),
 
           //   SignIn button
-          SizedBox(width: double.infinity, child: ElevatedButton(onPressed: () {}, child: const Text(EccomerceTexts.sigIn),),),
+          SizedBox(width: double.infinity, child: ElevatedButton(onPressed: () => Get.to(() => const NavigationMenu()), child: const Text(EccomerceTexts.sigIn),),),
           const SizedBox(height: EccomerceSizes.spaceBtwItems,),
           //   Create Account button
           SizedBox(
