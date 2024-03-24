@@ -1,9 +1,10 @@
-import 'package:eccomerce_app/features/shop/screens/home/widgets/home.dart';
 import 'package:eccomerce_app/utils/constants/colors.dart';
 import 'package:eccomerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+
+import 'features/shop/screens/home/home.dart';
 
 class NavigationMenu extends StatelessWidget{
   const NavigationMenu({super.key});
