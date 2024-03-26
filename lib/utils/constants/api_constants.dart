@@ -2,5 +2,5 @@
 
 //Example
 class APIConstants{
-  static const String SecretAPIKey = "nasklnalnsansklanslanslans";
+  static const String secretAPIKey = "nasklnalnsansklanslanslans";
 }
