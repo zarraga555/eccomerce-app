@@ -45,7 +45,7 @@ class EccomerceVerticalImageText extends StatelessWidget {
             ///   Text
             const SizedBox(height: EccomerceSizes.spaceBtwItems /2,),
             SizedBox(
-                width: 55,
+                //width: 55,
                 child: Text(
                   title,
                   style: Theme.of(context).textTheme.labelMedium!.apply(color: textColor),
