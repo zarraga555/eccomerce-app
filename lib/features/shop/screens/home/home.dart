@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
+import '../../../../common/widgets/layouts/grid_layout.dart';
+import '../../../../common/widgets/product_cards/product_card_vertical.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 
 class HomeScreen extends StatelessWidget{
@@ -15,12 +17,12 @@ class HomeScreen extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
             /// Header
-            EccomercePrimaryHeaderContainer(
+            const EccomercePrimaryHeaderContainer(
               child: Column(
                 children: [
                   /// AppBar
@@ -48,8 +50,17 @@ class HomeScreen extends StatelessWidget{
 
           //   Body -- Tutorial
             Padding(
-              padding: EdgeInsets.all(EccomerceSizes.defaultSpace),
-              child: EccomercePromoSlider(banners: [EccomerceImages.promoBanner1, EccomerceImages.promoBanner2, EccomerceImages.promoBanner3],)
+              padding: const EdgeInsets.all(EccomerceSizes.defaultSpace),
+              child: Column(
+                children: [
+                //   Promo Slider
+                  const EccomercePromoSlider(banners: [EccomerceImages.promoBanner1, EccomerceImages.promoBanner2, EccomerceImages.promoBanner3],),
+                  const SizedBox(height: EccomerceSizes.spaceBtwSections,),
+                //   Popular Products
+                  EccomerceGridLayout(itemCount: 2, itemBuilder: (_, index ) => const EccomerceCardVertical(),)
+                ],
+              ),
+
             ),
           ],
         ),
