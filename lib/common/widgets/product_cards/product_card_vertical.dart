@@ -1,6 +1,7 @@
 import 'package:eccomerce_app/common/styles/shadows.dart';
 import 'package:eccomerce_app/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:eccomerce_app/common/widgets/images/eccomerce_rounded_image.dart';
+import 'package:eccomerce_app/common/widgets/product_cards/product_price_text.dart';
 import 'package:eccomerce_app/common/widgets/texts/product_title_text.dart';
 import 'package:eccomerce_app/utils/constants/colors.dart';
 import 'package:eccomerce_app/utils/constants/image_strings.dart';
@@ -78,12 +79,8 @@ class EccomerceCardVertical extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        '\$35.5',
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.headlineMedium,
-                      ),
+                      // Price
+                      const EccomercePriceText(price: '45.50',),
                       Container(
                         decoration: const BoxDecoration(
                           color: EccomerceColors.dark,
