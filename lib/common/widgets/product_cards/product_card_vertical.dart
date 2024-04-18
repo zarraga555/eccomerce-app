@@ -11,6 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../icons/eccomerce_circular_icon.dart';
+import '../texts/brand_title_text_with_verified_icon.dart';
 
 class EccomerceCardVertical extends StatelessWidget {
   const EccomerceCardVertical({super.key});
@@ -62,43 +63,44 @@ class EccomerceCardVertical extends StatelessWidget {
           const SizedBox(height: EccomerceSizes.spaceBtwItems / 2,),
       
             ///   Details
-          Padding(
-              padding: const EdgeInsets.only(left: EccomerceSizes.sm),
+          const Padding(
+              padding: EdgeInsets.only(left: EccomerceSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const EccomerceProductTitleText(title: 'Green Nike Air Shoes', smallSize: true,),
-                  const SizedBox(height:EccomerceSizes.spaceBtwItems / 2,),
-                  Row(
-                    children: [
-                      Text('Nike', overflow: TextOverflow.ellipsis, maxLines: 1, style: Theme.of(context).textTheme.labelMedium,),
-                      const SizedBox(width: EccomerceSizes.xs),
-                      const Icon(Iconsax.verify5, color: EccomerceColors.primary, size: EccomerceSizes.iconXs,),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      // Price
-                      const EccomercePriceText(price: '45.50',),
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: EccomerceColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(EccomerceSizes.cardRadiusMd),
-                            bottomRight: Radius.circular(EccomerceSizes.productImageRadius),
-                          ),
-                        ),
-                        child: const SizedBox(
-                          width: EccomerceSizes.iconLg * 1.2,
-                          height: EccomerceSizes.iconLg * 1.2,
-                            child: Center(child: Icon(Iconsax.add, color: EccomerceColors.white,)),
-                        ),
-                      ),
-                    ],
-                  ),
+                  EccomerceProductTitleText(title: 'Green Nike Air Shoes', smallSize: true,),
+                  SizedBox(height:EccomerceSizes.spaceBtwItems / 2,),
+                  EccomerceBrandTitleWithVerifiedIcon(title: 'Nike',),
+
                 ],
               ),
+            ),
+            /// Todo: Add Spacer() here to keep the height of each Box same in case 1 0r 2 lines of Headings
+            const Spacer(),
+            // Price Row
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // Price
+                const Padding(
+                  padding: EdgeInsets.only(left: EccomerceSizes.sm),
+                  child: EccomercePriceText(price: '45.50',),
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                    color: EccomerceColors.dark,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(EccomerceSizes.cardRadiusMd),
+                      bottomRight: Radius.circular(EccomerceSizes.productImageRadius),
+                    ),
+                  ),
+                  child: const SizedBox(
+                    width: EccomerceSizes.iconLg * 1.2,
+                    height: EccomerceSizes.iconLg * 1.2,
+                    child: Center(child: Icon(Iconsax.add, color: EccomerceColors.white,)),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
