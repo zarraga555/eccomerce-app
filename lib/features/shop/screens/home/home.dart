@@ -56,11 +56,13 @@ class HomeScreen extends StatelessWidget{
                 //   Promo Slider
                   const EccomercePromoSlider(banners: [EccomerceImages.promoBanner1, EccomerceImages.promoBanner2, EccomerceImages.promoBanner3],),
                   const SizedBox(height: EccomerceSizes.spaceBtwSections,),
+                // Heading
+                  EccomerceSectionHeading(title: 'Popular Products', onPressed: () {},),
+                  const SizedBox(height: EccomerceSizes.spaceBtwItems),
                 //   Popular Products
                   EccomerceGridLayout(itemCount: 2, itemBuilder: (_, index ) => const EccomerceCardVertical(),)
                 ],
               ),
-
             ),
           ],
         ),
